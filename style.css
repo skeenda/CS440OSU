@@ -1,0 +1,24 @@
+h1{
+	font-style: italic;
+	text-align: center;
+}
+
+.tablist{
+
+}
+
+button{
+	position: relative;
+	background-color: teal;
+	width: 100px;
+	height: 20px;
+	border-radius: 20px;
+	border-color: black;
+	cursor: pointer;
+}
+
+.contentContainer{
+	margin-top: 10px;
+	height: 78vh;
+	background-color: lightgrey;
+}
