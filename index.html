@@ -2,18 +2,60 @@
 <html>
 <title>WSWW</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script>
+	var genre = "";
+	var year = "";
+	var newr = "";
+	function updateGenre(newg) {
+		genre = newg;
+	}
+	function updateYear(newy) {
+		year = newy;
+	}
+	function updateRating(newr) {
+		rating = newr;
+	}
+	function searchMovies() {
+		if ((genre != "") || (year != "") || (rating != "")) { //sends if at least one field is present
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", "getmovie.php?genre="+genre+"&year="+year+"&rating="+rating+"&random="+0, true);
+			console.log("sent");
+			xmlhttp.send();
+			xmlhttp.onreadystatechange = function() {document.getElementById("maindata").innerHTML = this.responseText;}
+		}
+		else {
+			alert("At least one field must be filled!");
+		}
+	}
+	function searchMoviesR() {
+		if ((genre != "") || (year != "") || (rating != "")) { //sends if at least one field is present
+			xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET", "getmovie.php?genre="+genre+"&year="+year+"&rating="+rating+"&random="+1, true);
+			console.log("sent");
+			xmlhttp.send();
+			xmlhttp.onreadystatechange = function() {document.getElementById("maindata").innerHTML = this.responseText;}
+		}
+		else {
+			alert("At least one field must be filled!");
+		}
+	}
+</script>
 <body>
 <h1>What Should We Watch</h1>
 <div class = "tablist">
 	Genre:
-	<input type = "text" class = "searchbar" onchange = ("myFunction")>
+	<input type = "text" class = "searchbar" onchange="updateGenre(this.value)">
 	<br/>
 	Year:
-	<input type = "text" class = "searchbar" onchange = ("myFunction")>
+	<input type = "text" class = "searchbar" onchange = "updateYear(this.value)">
 	<br/>
-	<button type = "button" onchange= ("myFunction")>Random Movie</button>
+	Rating:
+	<input type = "text" class = "searchbar" onchange = "updateRating(this.value)">
+	<br/>
+	<button type = "button" onclick = "searchMovies()">All Movies</button>
+	<button type = "button" onclick = "searchMoviesR()">Random Movie</button>
 </div>
-<div class = "contentContainer">
+<div class = "contentContainer" id = "maindata">
 </div>
 </body>
 </html>
