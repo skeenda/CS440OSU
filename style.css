@@ -3,22 +3,42 @@ h1{
 	text-align: center;
 }
 
-.tablist{
-
+button {
+	display: block;
+	margin: auto;
+	position: relative;
+	width: 100%;
+	border-radius: 5px;
+	border-color: black;
+	margin-top: 5px;
+	cursor: pointer;
+	max-width: 500px;
 }
 
-button{
+button:hover{
+	background-color: lightgrey;
+}
+
+.tablist{
+	margin: auto;
+	width: 50%;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	background-color: #f7f7f7;
+}
+.searchbar{
 	position: relative;
-	background-color: teal;
-	width: 100px;
-	height: 20px;
-	border-radius: 20px;
-	border-color: black;
-	cursor: pointer;
+	float: right;
+	width: 200px;
+	height: 12px;
+	border-radius: 5px;
+	border: 1px solid black;
 }
 
 .contentContainer{
 	margin-top: 10px;
 	height: 78vh;
-	background-color: lightgrey;
+	background-color: #f7f7f7;
+	border: 1px solid lightgrey;
 }
