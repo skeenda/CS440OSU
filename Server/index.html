@@ -36,11 +36,10 @@
 		xmlhttp.open("GET", "getmovie.php?genre="+genre+"&year="+year+"&rating="+rating+"&random="+1, true);
 		xmlhttp.send();
 		xmlhttp.onreadystatechange = function() {document.getElementById("maindata").innerHTML = this.responseText;
-			document.body.style.cursor = "default";
-		}
-		
-	}			
+			document.body.style.cursor = "default";	}
+	}
 </script>
+
 <body>
 <h1>What Should We Watch</h1>
 <div class = "tablist">
