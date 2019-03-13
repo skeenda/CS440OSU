@@ -13,6 +13,8 @@ button {
 	margin-top: 5px;
 	cursor: pointer;
 	max-width: 500px;
+	height: 35px;
+	font-size: 25px;
 }
 
 button:hover{
@@ -21,33 +23,45 @@ button:hover{
 
 .tablist{
 	margin: auto;
-	width: 50%;
+	width: 33%;
 	border: 1px solid black;
 	border-radius: 5px;
 	padding: 5px;
 	background-color: #f7f7f7;
+	
 }
 .searchbar{
 	position: relative;
 	float: right;
 	width: 200px;
-	height: 18px;
+	height: 30px;
 	border-radius: 5px;
 	border: 1px solid black;
+	font-size: 25px;
 }
 
 .selectBar{
 	position: relative;
 	float: right;
 	width: 202px;
-	height: 18px;
+	height: 30px;
 	border-radius: 5px;
 	border: 1px solid black;
+	font-size: 25px;
 }
 
 .contentContainer{
 	margin-top: 10px;
-	height: 78vh;
+
 	background-color: #f7f7f7;
-	border: 1px solid lightgrey;
+	
 }
+
+html, body { 
+	font-size: 30px;
+	height: 100%; 
+}
+
+body {
+  background-image: url("MovieBackground.png");
+  background-repeat: repeat;
